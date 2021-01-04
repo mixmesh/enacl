@@ -12,7 +12,7 @@ LDFLAGS+=-shared
 all: ../priv/enacl_nif.so
 
 ../priv/enacl_nif.so: $(SOURCES)
-	$(CC) $(CFLAGS) -o ../priv/enacl_nif.so -fpic $(SOURCES) $(LDFLAGS) $(ERL_TOP)/usr/lib/libei.a -lsodium
+	$(CC) $(CFLAGS) -o ../priv/enacl_nif.so -fpic $(SOURCES) $(LDFLAGS) -lsodium
 
 clean:
 	rm -rf *.o ../priv/enacl_nif.so
